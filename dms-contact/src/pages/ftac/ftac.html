@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Danh Sách</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>
+  <ion-item-group *ngFor="let period of items">
+    <ion-item-divider color="light">
+      {{period.name}}<br>
+      From: {{period.start_dt}}<br>
+      To: {{period.end_dt}}
+    </ion-item-divider>
+    <ion-item detail-push *ngFor="let sd of period.subdivisions" href="#">
+      <span>{{sd.name}}:</span><span item-right>{{sd.otac}} &ndash;&gt; {{sd.tac}}</span>
+    </ion-item>
+  </ion-item-group>
+</ion-content>
