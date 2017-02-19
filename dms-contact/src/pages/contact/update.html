@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Update Codes</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-searchbar (ionInput)="getItems($event);" placeholder="Enter Display Name"></ion-searchbar>
+  <ion-list *ngFor="let period of items">
+    <ion-list-header color="light">
+      <ion-label>From: {{period.start_dt | date: 'dd/MM/yyyy' }}</ion-label>
+      <ion-label >To: {{period.end_dt | date: 'dd/MM/yyyy' }}</ion-label>
+    </ion-list-header>
+    <ion-item-sliding detail-push *ngFor="let info of period.infoArray" href="#">
+      <ion-item>
+        <h2>{{info.contact.displayName}}</h2>
+        <p><span text-color="red">{{info.oldTel}}</span> <ion-icon name="arrow-round-forward"></ion-icon> {{info.newTel}}</p>
+        <p><i>{{info.name}}</i></p>
+      </ion-item>
+      <ion-item-options side="left">
+        <button ion-button color="primary" (click)="updatePhoneNumber($event, info)">
+          <ion-icon name="create">
+            Update
+          </ion-icon>
+        </button>
+      </ion-item-options>
+    </ion-item-sliding>
+  </ion-list>
+</ion-content>

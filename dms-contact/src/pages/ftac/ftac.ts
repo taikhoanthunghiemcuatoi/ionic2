@@ -18,6 +18,25 @@ export class FTAC {
     this.items[0] = data.period1;
     this.items[1] = data.period2;
     this.items[2] = data.period3;
+
+    //order items
+    this.items[0].subdivisions.sort((subdivision1, subdivision2) => {
+      if (subdivision1.name < subdivision2.name) return -1;
+      if (subdivision1.name > subdivision2.name) return 1;
+      return 0;
+    });
+
+    this.items[1].subdivisions.sort((subdivision1, subdivision2) => {
+      if (subdivision1.name < subdivision2.name) return -1;
+      if (subdivision1.name > subdivision2.name) return 1;
+      return 0;
+    });
+
+    this.items[2].subdivisions.sort((subdivision1, subdivision2) => {
+      if (subdivision1.name < subdivision2.name) return -1;
+      if (subdivision1.name > subdivision2.name) return 1;
+      return 0;
+    });
   }
 
   getItems(ev: any){

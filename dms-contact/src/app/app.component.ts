@@ -6,6 +6,7 @@ import { Page1 } from '../pages/page1/page1';
 import { Page2 } from '../pages/page2/page2';
 import { About } from '../pages/about/about';
 import { AllContacts} from '../pages/all-contacts/all-contacts';
+import { UpdateContacts} from '../pages/contact/update';
 import { FTAC } from '../pages/ftac/ftac';
 
 @Component({
@@ -23,9 +24,9 @@ export class MyApp {
 
     // used for an example of ngFor and navigation
     this.pages = [
-      { title: 'Page One', component: Page1 },
-      { title: 'Page Two', component: Page2 },
+      { title: 'Home', component: Page1 },
       { title: 'All Contacts', component: AllContacts},
+      { title: 'Update Contacts', component: UpdateContacts},
       { title: 'Codes List', component: FTAC},
       { title: 'About', component: About }
     ];

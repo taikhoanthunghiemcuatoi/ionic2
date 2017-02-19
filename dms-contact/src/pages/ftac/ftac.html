@@ -3,20 +3,20 @@
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>Danh Sách</ion-title>
+    <ion-title>Codes List</ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>
+  <ion-searchbar (ionInput)="getItems($event)" placeholder="Enter province name"></ion-searchbar>
   <ion-item-group *ngFor="let period of items">
     <ion-item-divider color="light">
-      {{period.name}}<br>
-      From: {{period.start_dt}}<br>
-      To: {{period.end_dt}}
+      <ion-label>From: {{period.start_dt | date: 'dd/MM/yyyy' }}</ion-label>
+      <ion-label >To: {{period.end_dt | date: 'dd/MM/yyyy' }}</ion-label>
     </ion-item-divider>
     <ion-item detail-push *ngFor="let sd of period.subdivisions" href="#">
-      <span>{{sd.name}}:</span><span item-right>{{sd.otac}} &ndash;&gt; {{sd.tac}}</span>
+      <h2>{{sd.name}}</h2>
+      <ion-note item-right>{{sd.otac}} <ion-icon name="arrow-round-forward"></ion-icon> {{sd.tac}}</ion-note>
     </ion-item>
   </ion-item-group>
 </ion-content>

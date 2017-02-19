@@ -8,9 +8,13 @@
 </ion-header>
 
 <ion-content padding>
-  <h3>All Contacts</h3>
-
-  <p>
-    This page is created to help you to view all contacts.
-  </p>
+  <ion-searchbar (ionInput)="getItems($event)" placeholder="Enter display name"></ion-searchbar>
+  <ion-list>
+    <ion-item *ngFor="let contact of items">
+      <h2>{{contact.displayName}}</h2>
+      <div *ngFor="let phoneNumber of contact.phoneNumbers">
+        <p>{{phoneNumber.type}}: {{phoneNumber.value}}</p>
+      </div>
+    </ion-item>
+  </ion-list>
 </ion-content>
