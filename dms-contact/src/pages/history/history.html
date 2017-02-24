@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>History</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <h3>FTAC</h3>
+
+  <ion-list>
+    <ion-item *ngFor="let item of items" href="#">
+      <p><span text-color="red">{{item.old_data}}</span> <ion-icon name="arrow-round-forward"></ion-icon> {{item.new_data}}</p>
+      <ion-note>created: {{item.dtcreated_dt | date: 'HH:mm:ss dd/MM/yyyy'}}</ion-note>
+    </ion-item>
+  </ion-list>
+</ion-content>

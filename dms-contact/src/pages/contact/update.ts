@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { Contacts, Contact, ContactFieldType, ContactFindOptions, IContactField } from 'ionic-native';
 import { Data } from '../../js/data.ts';
+import { DBStorage } from '../../js/db-storage.ts';
 
 @Component({
   selector: 'page-update-contact',
@@ -11,6 +12,8 @@ export class UpdateContacts{
 
   items: any[] = [{},{},{}];
   debug : boolean = false;
+  db = new DBStorage();
+
   constructor(public navCtrl: NavController){
 
 //    this.initializeItems();
@@ -68,7 +71,7 @@ export class UpdateContacts{
   updateContact(allContacts: Contact[], period: any): any{
     var len = allContacts.length;
     var results : any[] = [];
-    var count = 0;
+//    var count = 0;
     for (var i=0; i<len; i++){
       var contact : Contact = allContacts[i];
       var phoneNumbers : IContactField[] = contact.phoneNumbers;
@@ -83,7 +86,8 @@ export class UpdateContacts{
               var otac = "016";
               var tac = "0166";
             }
-            let phoneNumberValue = phoneNumberField.value.trim();
+            var phoneNumberValue = phoneNumberField.value.trim();
+/*
             let phoneNumberCodeIndex = phoneNumberValue.indexOf('-');
             var phoneNumberCode = phoneNumberValue.substring(0,phoneNumberCodeIndex);
             if (phoneNumberValue.indexOf('(') == 0 && phoneNumberValue.indexOf(')') > 0){
@@ -91,24 +95,28 @@ export class UpdateContacts{
               let endIndex = phoneNumberValue.indexOf(')');
               phoneNumberCode = phoneNumberValue.substring(startIndex+1, endIndex);
             }
-
+*/
+            let numberPatt = /\d+/g;
+            phoneNumberValue = phoneNumberValue.match(numberPatt).join("");
             if (this.debug)
-              console.log('phoneNumberValue=' + phoneNumberValue + ' phoneNumberCode=' + phoneNumberCode);
+              console.log('phoneNumberValue=' + phoneNumberValue);
 
             if (phoneNumberValue.indexOf('+') == 0)
               console.log('Will not handle the phone number: ' + phoneNumberValue);
 
-            if (phoneNumberCode == otac){
-              var oldTel = phoneNumberValue;
+            if (phoneNumberValue.indexOf(otac) == 0){
+              var oldTel = phoneNumberField.value.trim();
               var newTel = tac + phoneNumberValue.substring(otac.length);
+/*
               if (phoneNumberValue.indexOf('(') == 0 && phoneNumberValue.indexOf(')') > 0){
                 let startIndex = phoneNumberValue.indexOf('(');
                 let endIndex = phoneNumberValue.indexOf(')');
                 newTel = '(' + tac + ')' + phoneNumberValue.substring(endIndex + 1);
               }
+*/
               var record = {"name": sd.name, "otac": sd.otac, "tac": sd.tac, "oldTel":oldTel,"newTel":newTel,"contact":contact};
-              results[count] = record;
-              count = count + 1;
+              results[results.length] = record;
+//              count = count + 1;
               break;
             }
           }
@@ -139,16 +147,31 @@ export class UpdateContacts{
         if (phoneNumberValue.length > 0 && phoneNumberValue == info.oldTel){
           phoneNumberField.value = info.newTel;
           contact.save().then(
-            ()=>console.log('Contact saved! ', contact),
-            (error:any)=> console.error('Error saving contact.', error)
-            );
+            ()=> {
+              console.log('Contact saved! ', contact);
+              this.addToHistory(info.oldTel, info.newTel);
+
+              console.log('will remove phone number from GUI');
+              this.removePhoneNumberUI(info);
+            },
+            (error:any)=> console.error('Error saving contact: ' + JSON.stringify(error))
+            ).catch(error=>{console.log('Error Details: ' + JSON.stringify(error));});
         }
       }
     }
+  }
 
-    console.log('will remove phone number UI');
-    this.removePhoneNumberUI(info);
-
+  addToHistory(old_data: string, new_data: string){
+    console.log('will add to history table: old_data=' + old_data + ' new_data=' + new_data);
+    let hisType = "ftac";
+    var old_data = old_data;
+    var new_data = new_data;
+    var sql = "insert into history(his_type, old_data, new_data, dtcreated_dt) values(?,?,?,?)";
+    sql = sql.replace("?", "'" + hisType + "'");
+    sql = sql.replace("?", "'" + old_data + "'");
+    sql = sql.replace("?", "'" + new_data + "'");
+    sql = sql.replace("?", "'" + Date.now() + "'");
+    this.db.executeSql(sql).then((result)=>{console.log('data: ' + JSON.stringify(result));});
   }
 
   removePhoneNumberUI(info: any){
