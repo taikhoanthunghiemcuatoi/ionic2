@@ -19,6 +19,14 @@ export class FTAC {
     this.items[1] = data.period2;
     this.items[2] = data.period3;
 
+    this.items[0].start_dt = this.toCorrectDateString(data.period1.start_dt);
+    this.items[1].start_dt = this.toCorrectDateString(data.period2.start_dt);
+    this.items[2].start_dt = this.toCorrectDateString(data.period3.start_dt);
+
+    this.items[0].end_dt = this.toCorrectDateString(data.period1.end_dt);
+    this.items[1].end_dt = this.toCorrectDateString(data.period2.end_dt);
+    this.items[2].end_dt = this.toCorrectDateString(data.period3.end_dt);
+
     //order items
     this.items[0].subdivisions.sort((subdivision1, subdivision2) => {
       if (subdivision1.name < subdivision2.name) return -1;
@@ -37,6 +45,13 @@ export class FTAC {
       if (subdivision1.name > subdivision2.name) return 1;
       return 0;
     });
+  }
+
+  toCorrectDateString(strDate: string){
+    var a = strDate.split(/[^0-9]/);
+    //for (i=0;i<a.length;i++) { alert(a[i]); }
+    var d=new Date (Number(a[0]),Number(a[1])-1,Number(a[2]),Number(a[3]),Number(a[4]),Number(a[5]) );
+    return d;
   }
 
   getItems(ev: any){

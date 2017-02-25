@@ -24,3 +24,31 @@
           After installing the library and its type definition, we can use it by importing the library:
 
       Create a complete type definition. (2)
+
+---20170224---
+Pariss-iMac:dms-contact paris$ ionic platform add ios
+Adding ios project...
+
+Creating Cordova project for the iOS platform:
+
+        Path: platforms/ios
+
+        Package: com.domisu.contact
+        Name: dms-contact
+
+iOS project created with cordova-ios@4.3.1
+Installing "cordova-plugin-compat" for ios
+Installing "cordova-plugin-console" for ios
+Installing "cordova-plugin-contacts" for ios
+Dependent plugin "cordova-plugin-compat" already installed on ios.
+Installing "cordova-plugin-device" for ios
+Installing "cordova-plugin-splashscreen" for ios
+Installing "cordova-plugin-statusbar" for ios
+Installing "cordova-plugin-whitelist" for ios
+Installing "cordova-sqlite-storage" for ios
+installing external dependencies via npm
+npm install of external dependencies ok
+Installing "ionic-plugin-keyboard" for ios
+
+Pariss-iMac:dms-contact paris$
+

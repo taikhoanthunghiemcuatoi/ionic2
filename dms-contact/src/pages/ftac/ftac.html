@@ -11,12 +11,14 @@
   <ion-searchbar (ionInput)="getItems($event)" placeholder="Enter province name"></ion-searchbar>
   <ion-item-group *ngFor="let period of items">
     <ion-item-divider color="light">
-      <ion-label>From: {{period.start_dt | date: 'dd/MM/yyyy' }}</ion-label>
-      <ion-label >To: {{period.end_dt | date: 'dd/MM/yyyy' }}</ion-label>
+      <div>
+        <span>From: {{period.start_dt | date: 'dd/MM/yyyy' }}</span>
+        <span item-right>To: {{period.end_dt | date: 'dd/MM/yyyy' }}</span>
+      </div>
     </ion-item-divider>
-    <ion-item detail-push *ngFor="let sd of period.subdivisions" href="#">
-      <h2>{{sd.name}}</h2>
+    <button ion-item *ngFor="let sd of period.subdivisions" href="#">
+      <p>{{sd.name}}</p>
       <ion-note item-right>{{sd.otac}} <ion-icon name="arrow-round-forward"></ion-icon> {{sd.tac}}</ion-note>
-    </ion-item>
+    </button>
   </ion-item-group>
 </ion-content>
