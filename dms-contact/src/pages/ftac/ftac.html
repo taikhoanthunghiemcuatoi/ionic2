@@ -12,8 +12,8 @@
   <ion-item-group *ngFor="let period of items">
     <ion-item-divider color="light">
       <div>
-        <span>From: {{period.start_dt | date: 'dd/MM/yyyy' }}</span>
-        <span item-right>To: {{period.end_dt | date: 'dd/MM/yyyy' }}</span>
+        <span style="float:left">From: {{period.start_dt | date: 'dd/MM/yyyy' }}</span>
+        <span style="float:right">To: {{period.end_dt | date: 'dd/MM/yyyy' }}</span>
       </div>
     </ion-item-divider>
     <button ion-item *ngFor="let sd of period.subdivisions" href="#">

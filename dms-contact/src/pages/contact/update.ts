@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { NavController, ToastController } from 'ionic-angular';
 import { Contacts, Contact, ContactFieldType, ContactFindOptions, IContactField } from 'ionic-native';
 import { Data } from '../../js/data.ts';
 import { DBStorage } from '../../js/db-storage.ts';
+import { HistoryDB } from '../../js/HistoryDB.ts';
 
 @Component({
   selector: 'page-update-contact',
@@ -13,11 +14,16 @@ export class UpdateContacts{
   items: any[] = [{},{},{}];
   debug : boolean = false;
   db = new DBStorage();
-
-  constructor(public navCtrl: NavController){
+  historyDB = new HistoryDB();
+  historyItems : Array<Object>;
+  constructor(public navCtrl: NavController, public toastCtrl: ToastController){
 
 //    this.initializeItems();
-    this.getAllContacts();
+    this.historyDB.getAll(
+      (items)=>{this.historyItems = items;
+      this.getAllContacts();
+     });
+
   }
 
   initializeItems(){
@@ -71,7 +77,7 @@ export class UpdateContacts{
   updateContact(allContacts: Contact[], period: any): any{
     var len = allContacts.length;
     var results : any[] = [];
-//    var count = 0;
+
     for (var i=0; i<len; i++){
       var contact : Contact = allContacts[i];
       var phoneNumbers : IContactField[] = contact.phoneNumbers;
@@ -80,45 +86,35 @@ export class UpdateContacts{
           var phoneNumberField : IContactField = phoneNumbers[j];
           for (var k=0; k<period.subdivisions.length; k++){
             var sd = period.subdivisions[k];
-            var otac = "0" + sd.otac;
-            var tac = "0" + sd.tac;
+            var otac = "0" + sd.otac.trim();
+            var tac = "0" + sd.tac.trim();
             if (this.debug){
               var otac = "016";
               var tac = "0166";
             }
             var phoneNumberValue = phoneNumberField.value.trim();
-/*
-            let phoneNumberCodeIndex = phoneNumberValue.indexOf('-');
-            var phoneNumberCode = phoneNumberValue.substring(0,phoneNumberCodeIndex);
-            if (phoneNumberValue.indexOf('(') == 0 && phoneNumberValue.indexOf(')') > 0){
-              let startIndex = phoneNumberValue.indexOf('(');
-              let endIndex = phoneNumberValue.indexOf(')');
-              phoneNumberCode = phoneNumberValue.substring(startIndex+1, endIndex);
-            }
-*/
             let numberPatt = /\d+/g;
             phoneNumberValue = phoneNumberValue.match(numberPatt).join("");
+
             if (this.debug)
               console.log('phoneNumberValue=' + phoneNumberValue);
 
             if (phoneNumberValue.indexOf('+') == 0)
               console.log('Will not handle the phone number: ' + phoneNumberValue);
 
+            if (this.isPhoneNumberInHistory(phoneNumberValue)){
+              continue;
+            };
+
             if (phoneNumberValue.indexOf(otac) == 0){
               var oldTel = phoneNumberField.value.trim();
-              var newTel = tac + phoneNumberValue.substring(otac.length);
-/*
-              if (phoneNumberValue.indexOf('(') == 0 && phoneNumberValue.indexOf(')') > 0){
-                let startIndex = phoneNumberValue.indexOf('(');
-                let endIndex = phoneNumberValue.indexOf(')');
-                newTel = '(' + tac + ')' + phoneNumberValue.substring(endIndex + 1);
-              }
-*/
+
+              var newTel = '(' + tac + ') ' + this.insertHyphen(3, phoneNumberValue.substring(otac.length));
               var record = {"name": sd.name, "otac": sd.otac, "tac": sd.tac, "oldTel":oldTel,"newTel":newTel,"contact":contact};
               results[results.length] = record;
-//              count = count + 1;
               break;
             }
+
           }
         }
       }
@@ -134,6 +130,42 @@ export class UpdateContacts{
     return results;
   }
 
+  insertHyphen(step: number, str: string): string{
+    var chars = str.split("").reverse().join("");
+    console.log('[before insertHyphen] str: ' + str);
+    var array = [];
+    var count = 0;
+    var step = 3;
+    while(chars.length > 0){
+    var temp = chars.substring(0,step);
+     chars = chars.substring(temp.length);
+     array[count++] = temp + '-';
+    }
+    var temp = array.join("");
+    if (temp.charAt(temp.length-1) == '-'){
+      temp = temp.substring(0,temp.length-1);
+    }
+    temp = temp.split("").reverse().join("");
+    console.log('after: ' + str);
+    console.log('[after insertHyphen] chars: ' + temp);
+    return temp;
+  }
+
+  isPhoneNumberInHistory(phoneNumber: string):boolean{
+    console.log('historyItems: ' + JSON.stringify(this.historyItems));
+    let numberPatt = /\d+/g;
+
+    let len = this.historyItems.length;
+    for (var i=0; i<len; i++){
+      let item : any = this.historyItems[i];
+      var hisPhoneNumber = item.new_data;
+      hisPhoneNumber = hisPhoneNumber.match(numberPatt).join("");
+      if (phoneNumber == hisPhoneNumber)
+        return true;
+    }
+    return false;
+  }
+
   updatePhoneNumber(event: any, info: any){
     var contact : Contact = info.contact;
     if (this.debug)
@@ -146,19 +178,49 @@ export class UpdateContacts{
         var phoneNumberValue : string = phoneNumberField.value.trim();
         if (phoneNumberValue.length > 0 && phoneNumberValue == info.oldTel){
           phoneNumberField.value = info.newTel;
+          if (contact.birthday == null){
+            console.log("contact's birthday is NULL. Will set it to 1-Jan-1970");
+            contact.birthday = new Date(0);
+            console.log("contact's birday: " + JSON.stringify(contact.birthday));
+          }
           contact.save().then(
             ()=> {
+              //DO NOT KNOW WHY THIS FUNCTION NEVER CALLED.
+              /*
               console.log('Contact saved! ', contact);
               this.addToHistory(info.oldTel, info.newTel);
 
               console.log('will remove phone number from GUI');
               this.removePhoneNumberUI(info);
+              this.presentToast('Contact saved!');
+              */
             },
-            (error:any)=> console.error('Error saving contact: ' + JSON.stringify(error))
-            ).catch(error=>{console.log('Error Details: ' + JSON.stringify(error));});
+            (error:any)=> {
+//DO NOT KNOW WHY APP SAVED CONTACT OK BUT ALWAYS THROW UNDEFINED ERROR (CODE = 0) => WILL COPY CODE AFTER SAVING OK TO HERE
+              /*
+              console.error('Error saving contact: ' + JSON.stringify(error));
+              this.presentToast('Error saving contact');
+              */
+
+              console.log('Contact saved! ', contact);
+              this.addToHistory(info.oldTel, info.newTel);
+
+              console.log('will remove phone number from GUI');
+              this.removePhoneNumberUI(info);
+              this.presentToast('Contact saved!');
+            })
+            .catch(error=>{console.log('Error Details: ' + JSON.stringify(error.message));});
         }
       }
     }
+  }
+
+  presentToast(msg: string) {
+    let toast = this.toastCtrl.create({
+      message: msg,
+      duration: 3000
+    });
+    toast.present();
   }
 
   addToHistory(old_data: string, new_data: string){

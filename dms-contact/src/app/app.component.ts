@@ -20,7 +20,7 @@ import { DBStorage } from '../js/db-storage.ts';
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
-  rootPage: any = Page1;
+  rootPage: any = Home;
 
   pages: Array<{title: string, component: any}>;
 
@@ -31,8 +31,6 @@ export class MyApp {
 
     // used for an example of ngFor and navigation
     this.pages = [
-      { title: 'Page One', component: Page1 },
-      { title: 'Page Two', component: Page2 },
       { title: 'Home', component: Home},
       { title: 'All Contacts', component: AllContacts},
       { title: 'Update Contacts', component: UpdateContacts},
@@ -73,7 +71,7 @@ export class MyApp {
 
     for (var i=0; i<dropTables.length; i++){
       let dropSql = dropTables[i];
-      this.db.executeSql(dropSql);
+      //this.db.executeSql(dropSql);
 
       let createSql = createTables[i];
       this.db.executeSql(createSql);
