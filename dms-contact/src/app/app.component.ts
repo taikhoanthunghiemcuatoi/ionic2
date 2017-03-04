@@ -34,8 +34,8 @@ export class MyApp {
       { title: 'Home', component: Home},
       { title: 'All Contacts', component: AllContacts},
       { title: 'Update Contacts', component: UpdateContacts},
-      { title: 'Codes List', component: FTAC},
       { title: 'History', component: History},
+      { title: 'Codes List', component: FTAC},
       { title: 'Help', component: Help},
       { title: 'About', component: About }
     ];

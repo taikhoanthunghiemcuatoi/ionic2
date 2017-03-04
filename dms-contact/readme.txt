@@ -52,3 +52,40 @@ Installing "ionic-plugin-keyboard" for ios
 
 Pariss-iMac:dms-contact paris$
 
+---20170301---
+***install the plugin "cordova-plugin-crosswalk-webview" to support minSdkVersion>=16
+***URL: https://github.com/crosswalk-project/cordova-plugin-crosswalk-webview
+***URL: https://github.com/driftyco/ionic-cli/issues/898
+***URL: https://github.com/driftyco/ionic-cli/issues/958
+***URL: http://stackoverflow.com/questions/12319809/application-error-the-connection-to-the-server-was-unsuccessful-file-andr
+(<preference name="loadUrlTimeoutValue" value="700000" />)
+***URL: http://stackoverflow.com/questions/24547924/android-install-failed-version-downgrade
+***URL: https://forum.ionicframework.com/t/solved-android-build-broken-in-cordova-6-4-cordova-android-6-0-0-not-working-with-crosswalk/69715/5
+***URL: https://github.com/apache/cordova-android/blob/master/RELEASENOTES.md
+***URL: https://forum.ionicframework.com/t/showing-blank-white-screen/15545/28
+
+Pariss-iMac:dms-contact paris$ ionic plugin add cordova-plugin-crosswalk-webview --save
+Fetching plugin "cordova-plugin-crosswalk-webview@2.3.0" via npm
+Installing "cordova-plugin-crosswalk-webview" for android
+ANDROID_HOME=/Users/paris/Desktop/workspace/Android/sdk
+JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home
+Subproject Path: CordovaLib
+Starting a new Gradle Daemon for this build (subsequent builds will be faster).
+Incremental java compilation is an incubating feature.
+:clean
+:CordovaLib:clean
+
+BUILD SUCCESSFUL
+Total time: 5.24 secs
+Subproject Path: CordovaLib
+        After much discussion and analysis of the market, we have decided to discontinue support for Android 4.0 (ICS) in Crosswalk starting with version 20.
+        So the minSdkVersion of Cordova project is configured to 16 by default.
+
+Installing "cordova-plugin-crosswalk-webview" for ios
+        After much discussion and analysis of the market, we have decided to discontinue support for Android 4.0 (ICS) in Crosswalk starting with version 20.
+        So the minSdkVersion of Cordova project is configured to 16 by default.
+
+Saved plugin info for "cordova-plugin-crosswalk-webview" to config.xml
+Pariss-iMac:dms-contact paris$
+
+

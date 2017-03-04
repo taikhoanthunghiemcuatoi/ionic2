@@ -51,27 +51,34 @@ export class UpdateContacts{
       allContacts = data.initializeContactsList();
     var result1 = {
       "name":data.period1.name,
-      "start_dt":data.period1.start_dt,
-      "end_dt":data.period1.end_dt,
+      "start_dt":this.toCorrectDateString(data.period1.start_dt),
+      "end_dt":this.toCorrectDateString(data.period1.end_dt),
       "infoArray":this.updateContact(allContacts,data.period1)
       };
     this.items[0] = result1;
 
     var result2 = {
       "name":data.period2.name,
-      "start_dt":data.period2.start_dt,
-      "end_dt":data.period2.end_dt,
+      "start_dt":this.toCorrectDateString(data.period2.start_dt),
+      "end_dt":this.toCorrectDateString(data.period2.end_dt),
       "infoArray":this.updateContact(allContacts,data.period2)
       };
       this.items[1] = result2;
 
     var result3 = {
       "name":data.period3.name,
-      "start_dt":data.period3.start_dt,
-      "end_dt":data.period3.end_dt,
+      "start_dt":this.toCorrectDateString(data.period3.start_dt),
+      "end_dt":this.toCorrectDateString(data.period3.end_dt),
       "infoArray":this.updateContact(allContacts,data.period3)
       };
     this.items[2] = result3;
+  }
+
+  toCorrectDateString(strDate: string){
+    var a = strDate.split(/[^0-9]/);
+    //for (i=0;i<a.length;i++) { alert(a[i]); }
+    var d=new Date (Number(a[0]),Number(a[1])-1,Number(a[2]),Number(a[3]),Number(a[4]),Number(a[5]) );
+    return d;
   }
 
   updateContact(allContacts: Contact[], period: any): any{
@@ -178,24 +185,27 @@ export class UpdateContacts{
         var phoneNumberValue : string = phoneNumberField.value.trim();
         if (phoneNumberValue.length > 0 && phoneNumberValue == info.oldTel){
           phoneNumberField.value = info.newTel;
+/*
           if (contact.birthday == null){
             console.log("contact's birthday is NULL. Will set it to 1-Jan-1970");
             contact.birthday = new Date(0);
             console.log("contact's birday: " + JSON.stringify(contact.birthday));
           }
+*/
           contact.save().then(
             ()=> {
-              //DO NOT KNOW WHY THIS FUNCTION NEVER CALLED.
-              /*
+              //DO NOT KNOW WHY THIS FUNCTION NEVER CALLED ON ANDROID BUT ONLY ON iOS.
+
               console.log('Contact saved! ', contact);
               this.addToHistory(info.oldTel, info.newTel);
 
               console.log('will remove phone number from GUI');
               this.removePhoneNumberUI(info);
               this.presentToast('Contact saved!');
-              */
+
             },
             (error:any)=> {
+              console.error('Error saving contact: ' + JSON.stringify(error));
 //DO NOT KNOW WHY APP SAVED CONTACT OK BUT ALWAYS THROW UNDEFINED ERROR (CODE = 0) => WILL COPY CODE AFTER SAVING OK TO HERE
               /*
               console.error('Error saving contact: ' + JSON.stringify(error));
