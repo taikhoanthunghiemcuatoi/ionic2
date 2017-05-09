@@ -24,11 +24,17 @@ export class AllContacts {
     let promise = Contacts.find(fields,options).then((contacts)=>{
       this.items = contacts;
       this.items.sort((contact1, contact2)=> {
-        if (contact1.displayName < contact2.displayName) return -1;
-        if (contact1.displayName > contact2.displayName) return 1;
+        if (contact1.displayName != null){
+          if (contact1.displayName < contact2.displayName) return -1;
+          if (contact1.displayName > contact2.displayName) return 1;
+        }else if (contact1.name.formatted){
+          if (contact1.name.formatted < contact2.name.formatted) return -1;
+          if (contact1.name.formatted > contact2.name.formatted) return 1;
+        }
         return 0;;
       });
       this.cachedItems = this.items;
+      console.log('contacts: ' + JSON.stringify(contacts));
       if (this.debug){
         console.log('contacts list:\n');
         for (var i=0; i<contacts.length; i++){
@@ -53,7 +59,13 @@ export class AllContacts {
     //if the value is an empty string => don't filter the items
     if (val && val.trim() != ''){
       this.items = this.cachedItems.filter((item) => {
-        return (item.displayName.toLowerCase().indexOf(val.toLowerCase()) > -1);
+        if (item.displayName != null)
+          //for android search
+          return (item.displayName.toLowerCase().indexOf(val.toLowerCase()) > -1);
+        else if (item.name.formatted !=null){
+          //for iOS search
+          return (item.name.formatted.toLowerCase().indexOf(val.toLowerCase()) > -1);
+        }
       });
     }else{
       this.initializeItems();

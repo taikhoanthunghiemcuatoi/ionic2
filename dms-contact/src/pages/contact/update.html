@@ -11,8 +11,10 @@
   <ion-searchbar (ionInput)="getItems($event);" placeholder="Enter Display Name"></ion-searchbar>
   <ion-list *ngFor="let period of items">
     <ion-list-header color="light">
-      <ion-label>From: {{period.start_dt | date: 'dd/MM/yyyy' }}</ion-label>
-      <ion-label >To: {{period.end_dt | date: 'dd/MM/yyyy' }}</ion-label>
+      <div>
+        <span style="float:left">From: {{period.start_dt | date: 'dd/MM/yyyy' }}</span>
+        <span style="float:right">To: {{period.end_dt | date: 'dd/MM/yyyy' }}</span>
+      </div>
     </ion-list-header>
     <ion-item-sliding detail-push *ngFor="let info of period.infoArray" href="#">
       <ion-item>
