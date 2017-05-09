@@ -1,0 +1,1227 @@
+---20170216---
+###START ADDING ANDROID PLATFORM INTO THE PROJECT###
+E:\Research\domisu\GitHub\ionic2\dms-contact>cordova platform add android
+Adding android project...
+Creating Cordova project for the Android platform:
+        Path: platforms\android
+        Package: com.ionicframework.dmscontact201693
+        Name: dms_contact
+        Activity: MainActivity
+        Android target: android-23
+Android project created with cordova-android@5.1.1
+Installing "cordova-plugin-console" for android
+Installing "cordova-plugin-device" for android
+Installing "cordova-plugin-splashscreen" for android
+Installing "cordova-plugin-statusbar" for android
+Installing "cordova-plugin-whitelist" for android
+
+               This plugin is only applicable for versions of cordova-android greater than 4.0. If you have a previous platform version, you do *not* need this plugin since the whit
+elist will be built in.
+
+Installing "ionic-plugin-keyboard" for android
+
+E:\Research\domisu\GitHub\ionic2\dms-contact>
+
+###START DEPLOYING THE PROJECT TO ANDROID DEVICE###
+E:\Research\domisu\GitHub\ionic2\dms-contact>ionic run android
+
+> ionic-hello-world@ ionic:build E:\Research\domisu\GitHub\ionic2\dms-contact
+> ionic-app-scripts build
+
+[23:28:31]  ionic-app-scripts 1.0.0
+[23:28:31]  build dev started ...
+[23:28:31]  clean started ...
+[23:28:31]  clean finished in 40 ms
+[23:28:31]  copy started ...
+[23:28:31]  transpile started ...
+[23:28:37]  transpile finished in 6.31 s
+[23:28:37]  webpack started ...
+[23:28:39]  copy finished in 7.87 s
+[23:28:48]  webpack finished in 10.89 s
+[23:28:48]  sass started ...
+[23:28:51]  sass finished in 3.00 s
+[23:28:51]  build dev finished in 20.33 s
+ANDROID_HOME=E:\Research\domisu\android\android-sdk
+
+JAVA_HOME=C:\Program Files (x86)\Java\jdk1.6.0_45
+
+No target specified, deploying to emulator
+
+
+Default language level for compileSdkVersion 'android-23' is 1.7, but the JDK used is 1.6, so the JDK language level will be used.
+
+Default language level for compileSdkVersion 'android-23' is 1.7, but the JDK used is 1.6, so the JDK language level will be used.
+
+Default language level for compileSdkVersion 'android-23' is 1.7, but the JDK used is 1.6, so the JDK language level will be used.
+
+
+Default language level for compileSdkVersion 'android-23' is 1.7, but the JDK used is 1.6, so the JDK language level will be used.
+
+
+Default language level for compileSdkVersion 'android-23' is 1.7, but the JDK used is 1.6, so the JDK language level will be used.
+
+
+Default language level for compileSdkVersion 'android-23' is 1.7, but the JDK used is 1.6, so the JDK language level will be used.
+
+Default language level for compileSdkVersion 'android-23' is 1.7, but the JDK used is 1.6, so the JDK language level will be used.
+
+
+Default language level for compileSdkVersion 'android-23' is 1.7, but the JDK used is 1.6, so the JDK language level will be used.
+
+
+Default language level for compileSdkVersion 'android-23' is 1.7, but the JDK used is 1.6, so the JDK language level will be used.
+
+Default language level for compileSdkVersion 'android-23' is 1.7, but the JDK used is 1.6, so the JDK language level will be used.
+
+:preBuild
+
+UP-TO-DATE
+
+:preDebugBuild UP-TO-DATE
+
+:checkDebugManifest
+
+
+:CordovaLib:preBuild
+ UP-TO-DATE
+
+:CordovaLib:preDebugBuild
+ UP-TO-DATE
+
+:CordovaLib:compileDebugNdk
+ UP-TO-DATE
+
+:CordovaLib:compileLint
+
+
+:CordovaLib:copyDebugLint
+ UP-TO-DATE
+
+:CordovaLib:mergeDebugProguardFiles
+
+:CordovaLib:packageDebugRenderscript
+ UP-TO-DATE
+
+:CordovaLib:checkDebugManifest
+:CordovaLib:prepareDebugDependencies
+:CordovaLib:compileDebugRenderscript
+
+
+:CordovaLib:generateDebugResValues
+
+
+:CordovaLib:generateDebugResources
+
+:CordovaLib:packageDebugResources
+
+
+:CordovaLib:compileDebugAidl
+
+
+:CordovaLib:generateDebugBuildConfig
+
+:CordovaLib:generateDebugAssets UP-TO-DATE
+
+:CordovaLib:mergeDebugAssets
+
+
+:CordovaLib:processDebugManifest
+
+
+:CordovaLib:processDebugResources
+
+
+:CordovaLib:generateDebugSources
+
+:CordovaLib:compileDebugJavaWithJavac
+warning: java\lang\Object.class(java\lang:Object.class): major version 51 is newer than 50, the highest major version supported by this compiler.
+
+It is recommended that the compiler be upgraded.
+
+warning: java\lang\String.class(java\lang:String.class): major version 51 is newer than 50, the highest major version supported by this compiler.
+
+It is recommended that the compiler be upgraded.
+
+warning: org\json\JSONArray.class(org\json:JSONArray.class): major version 51 is newer than 50, the highest major version supported by this compiler.
+
+It is recommended that the compiler be upgraded.
+
+warning: android\util\Log.class(android\util:Log.class): major version 51 is newer than 50, the highest major version supported by this compiler.
+
+It is recommended that the compiler be upgraded.
+
+warning: org\json\JSONObject.class(org\json:JSONObject.class): major version 51 is newer than 50, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+
+warning: java\util\List.class(java\util:List.class): major version 51 is newer than 50, the highest major version supported by this compiler.
+
+It is recommended that the compiler be upgraded.
+
+warning: java\util\Map.class(java\util:Map.class): major version 51 is newer than 50, the highest major version supported by this compiler.
+
+It is recommended that the compiler be upgraded.
+
+warning: android\content\Context.class(android\content:Context.class): major version 51 is newer than 50, the highest major version supported by this compiler.
+
+It is recommended that the compiler be upgraded.
+
+warning: android\content\Intent.class(android\content:Intent.class): major version 51 is newer than 50, the highest major version supported by this compiler.
+
+It is recommended that the compiler be upgraded.
+
+warning: android\view\View.class(android\view:View.class): major version 51 is newer than 50, the highest major version supported by this compiler.
+
+It is recommended that the compiler be upgraded.
+
+warning: android\webkit\WebChromeClient.class(android\webkit:WebChromeClient.class): major version 51 is newer than 50, the highest major version supported by this compiler.
+
+It is recommended that the compiler be upgraded.
+
+warning: android\webkit\WebChromeClient$CustomViewCallback.class(android\webkit:WebChromeClient$CustomViewCallback.class): major version 51 is newer than 50, the highest major versi
+on supported by this compiler.
+
+It is recommended that the compiler be upgraded.
+
+warning: android\util\Base64.class(android\util:Base64.class): major version 51 is newer than 50, the highest major version supported by this compiler.
+
+It is recommended that the compiler be upgraded.
+
+warning: android\app\Activity.class(android\app:Activity.class): major version 51 is newer than 50, the highest major version supported by this compiler.
+
+It is recommended that the compiler be upgraded.
+
+warning: java\util\concurrent\ExecutorService.class(java\util\concurrent:ExecutorService.class): major version 51 is newer than 50, the highest major version supported by this compi
+ler.
+It is recommended that the compiler be upgraded.
+
+warning: java\util\HashMap.class(java\util:HashMap.class): major version 51 is newer than 50, the highest major version supported by this compiler.
+
+It is recommended that the compiler be upgraded.
+
+warning: java\util\Locale.class(java\util:Locale.class): major version 51 is newer than 50, the highest major version supported by this compiler.
+
+It is recommended that the compiler be upgraded.
+
+warning: android\os\Bundle.class(android\os:Bundle.class): major version 51 is newer than 50, the highest major version supported by this compiler.
+
+It is recommended that the compiler be upgraded.
+
+warning: android\content\ContentResolver.class(android\content:ContentResolver.class): major version 51 is newer than 50, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+
+warning: android\content\res\AssetFileDescriptor.class(android\content\res:AssetFileDescriptor.class): major version 51 is newer than 50, the highest major version supported by this
+ compiler.
+
+It is recommended that the compiler be upgraded.
+warning: android\content\res\AssetManager.class(android\content\res:AssetManager.class): major version 51 is newer than 50, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: android\database\Cursor.class(android\database:Cursor.class): major version 51 is newer than 50, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: android\net\Uri.class(android\net:Uri.class): major version 51 is newer than 50, the highest major version supported by this compiler.
+
+It is recommended that the compiler be upgraded.
+warning: android\os\Looper.class(android\os:Looper.class): major version 51 is newer than 50, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: android\webkit\MimeTypeMap.class(android\webkit:MimeTypeMap.class): major version 51 is newer than 50, the highest major version supported by this compiler.
+
+It is recommended that the compiler be upgraded.
+warning: java\io\ByteArrayInputStream.class(java\io:ByteArrayInputStream.class): major version 51 is newer than 50, the highest major version supported by this compiler.
+
+It is recommended that the compiler be upgraded.
+warning: java\io\File.class(java\io:File.class): major version 51 is newer than 50, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: java\io\FileInputStream.class(java\io:FileInputStream.class): major version 51 is newer than 50, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: java\io\FileNotFoundException.class(java\io:FileNotFoundException.class): major version 51 is newer than 50, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: java\io\FileOutputStream.class(java\io:FileOutputStream.class): major version 51 is newer than 50, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: java\io\IOException.class(java\io:IOException.class): major version 51 is newer than 50, the highest major version supported by this compiler.
+
+It is recommended that the compiler be upgraded.
+
+warning: java\io\InputStream.class(java\io:InputStream.class): major version 51 is newer than 50, the highest major version supported by this compiler.
+
+It is recommended that the compiler be upgraded.
+
+warning: java\io\OutputStream.class(java\io:OutputStream.class): major version 51 is newer than 50, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+
+warning: java\io\UnsupportedEncodingException.class(java\io:UnsupportedEncodingException.class): major version 51 is newer than 50, the highest major version supported by this compi
+ler.
+It is recommended that the compiler be upgraded.
+warning: java\net\HttpURLConnection.class(java\net:HttpURLConnection.class): major version 51 is newer than 50, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+
+warning: java\net\URL.class(java\net:URL.class): major version 51 is newer than 50, the highest major version supported by this compiler.
+
+It is recommended that the compiler be upgraded.
+
+warning: java\nio\channels\FileChannel.class(java\nio\channels:FileChannel.class): major version 51 is newer than 50, the highest major version supported by this compiler.
+
+It is recommended that the compiler be upgraded.
+
+warning: java\util\Collection.class(java\util:Collection.class): major version 51 is newer than 50, the highest major version supported by this compiler.
+
+It is recommended that the compiler be upgraded.
+
+warning: java\util\LinkedHashMap.class(java\util:LinkedHashMap.class): major version 51 is newer than 50, the highest major version supported by this compiler.
+
+It is recommended that the compiler be upgraded.
+
+warning: org\json\JSONException.class(org\json:JSONException.class): major version 51 is newer than 50, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+
+warning: android\content\res\Configuration.class(android\content\res:Configuration.class): major version 51 is newer than 50, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+
+warning: android\os\Debug.class(android\os:Debug.class): major version 51 is newer than 50, the highest major version supported by this compiler.
+
+It is recommended that the compiler be upgraded.
+
+warning: android\view\KeyEvent.class(android\view:KeyEvent.class): major version 51 is newer than 50, the highest major version supported by this compiler.
+
+It is recommended that the compiler be upgraded.
+
+warning: java\lang\Enum.class(java\lang:Enum.class): major version 51 is newer than 50, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+
+warning: java\io\Serializable.class(java\io:Serializable.class): major version 51 is newer than 50, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+
+warning: java\lang\Comparable.class(java\lang:Comparable.class): major version 51 is newer than 50, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+
+warning: android\content\pm\PackageManager.class(android\content\pm:PackageManager.class): major version 51 is newer than 50, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+
+warning: android\os\Build.class(android\os:Build.class): major version 51 is newer than 50, the highest major version supported by this compiler.
+
+It is recommended that the compiler be upgraded.
+
+warning: java\lang\Thread.class(java\lang:Thread.class): major version 51 is newer than 50, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+
+warning: java\security\Principal.class(java\security:Principal.class): major version 51 is newer than 50, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+
+warning: java\security\PrivateKey.class(java\security:PrivateKey.class): major version 51 is newer than 50, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+
+warning: java\security\cert\X509Certificate.class(java\security\cert:X509Certificate.class): major version 51 is newer than 50, the highest major version supported by this compiler.
+
+
+It is recommended that the compiler be upgraded.
+
+warning: java\lang\Boolean.class(java\lang:Boolean.class): major version 51 is newer than 50, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+
+warning: java\util\ArrayList.class(java\util:ArrayList.class): major version 51 is newer than 50, the highest major version supported by this compiler.
+
+It is recommended that the compiler be upgraded.
+
+warning: java\util\LinkedList.class(java\util:LinkedList.class): major version 51 is newer than 50, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+
+warning: java\lang\StringBuilder.class(java\lang:StringBuilder.class): major version 51 is newer than 50, the highest major version supported by this compiler.
+
+It is recommended that the compiler be upgraded.
+
+warning: java\lang\Deprecated.class(java\lang:Deprecated.class): major version 51 is newer than 50, the highest major version supported by this compiler.
+
+It is recommended that the compiler be upgraded.
+
+warning: java\util\regex\Matcher.class(java\util\regex:Matcher.class): major version 51 is newer than 50, the highest major version supported by this compiler.
+
+It is recommended that the compiler be upgraded.
+
+warning: java\util\regex\Pattern.class(java\util\regex:Pattern.class): major version 51 is newer than 50, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+
+warning: org\xmlpull\v1\XmlPullParser.class(org\xmlpull\v1:XmlPullParser.class): major version 51 is newer than 50, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+
+warning: org\xmlpull\v1\XmlPullParserException.class(org\xmlpull\v1:XmlPullParserException.class): major version 51 is newer than 50, the highest major version supported by this com
+piler.
+It is recommended that the compiler be upgraded.
+
+warning: android\app\AlertDialog.class(android\app:AlertDialog.class): major version 51 is newer than 50, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+
+warning: android\annotation\SuppressLint.class(android\annotation:SuppressLint.class): major version 51 is newer than 50, the highest major version supported by this compiler.
+
+It is recommended that the compiler be upgraded.
+
+warning: android\content\DialogInterface.class(android\content:DialogInterface.class): major version 51 is newer than 50, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+
+warning: android\graphics\Color.class(android\graphics:Color.class): major version 51 is newer than 50, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+
+warning: android\media\AudioManager.class(android\media:AudioManager.class): major version 51 is newer than 50, the highest major version supported by this compiler.
+
+It is recommended that the compiler be upgraded.
+warning: android\view\Menu.class(android\view:Menu.class): major version 51 is newer than 50, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: android\view\MenuItem.class(android\view:MenuItem.class): major version 51 is newer than 50, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+
+warning: android\view\ViewGroup.class(android\view:ViewGroup.class): major version 51 is newer than 50, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+
+warning: android\view\Window.class(android\view:Window.class): major version 51 is newer than 50, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+
+warning: android\view\WindowManager.class(android\view:WindowManager.class): major version 51 is newer than 50, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+
+warning: android\webkit\WebViewClient.class(android\webkit:WebViewClient.class): major version 51 is newer than 50, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+
+warning: android\widget\FrameLayout.class(android\widget:FrameLayout.class): major version 51 is newer than 50, the highest major version supported by this compiler.
+
+It is recommended that the compiler be upgraded.
+
+warning: android\view\LayoutInflater.class(android\view:LayoutInflater.class): major version 51 is newer than 50, the highest major version supported by this compiler.
+
+It is recommended that the compiler be upgraded.
+
+warning: android\view\LayoutInflater$Factory2.class(android\view:LayoutInflater$Factory2.class): major version 51 is newer than 50, the highest major version supported by this compi
+ler.
+It is recommended that the compiler be upgraded.
+warning: android\view\LayoutInflater$Factory.class(android\view:LayoutInflater$Factory.class): major version 51 is newer than 50, the highest major version supported by this compile
+r.
+It is recommended that the compiler be upgraded.
+warning: android\view\Window$Callback.class(android\view:Window$Callback.class): major version 51 is newer than 50, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+
+warning: android\view\KeyEvent$Callback.class(android\view:KeyEvent$Callback.class): major version 51 is newer than 50, the highest major version supported by this compiler.
+
+It is recommended that the compiler be upgraded.
+
+warning: android\os\Parcelable.class(android\os:Parcelable.class): major version 51 is newer than 50, the highest major version supported by this compiler.
+
+It is recommended that the compiler be upgraded.
+
+warning: android\view\InputEvent.class(android\view:InputEvent.class): major version 51 is newer than 50, the highest major version supported by this compiler.
+
+It is recommended that the compiler be upgraded.
+
+warning: android\view\View$OnCreateContextMenuListener.class(android\view:View$OnCreateContextMenuListener.class): major version 51 is newer than 50, the highest major version suppo
+rted by this compiler.
+It is recommended that the compiler be upgraded.
+
+warning: android\graphics\drawable\Drawable.class(android\graphics\drawable:Drawable.class): major version 51 is newer than 50, the highest major version supported by this compiler.
+
+
+It is recommended that the compiler be upgraded.
+
+warning: android\graphics\drawable\Drawable$Callback.class(android\graphics\drawable:Drawable$Callback.class): major version 51 is newer than 50, the highest major version supported
+ by this compiler.
+It is recommended that the compiler be upgraded.
+
+warning: android\view\accessibility\AccessibilityEventSource.class(android\view\accessibility:AccessibilityEventSource.class): major version 51 is newer than 50, the highest major v
+ersion supported by this compiler.
+
+It is recommended that the compiler be upgraded.
+
+warning: android\content\ComponentCallbacks2.class(android\content:ComponentCallbacks2.class): major version 51 is newer than 50, the highest major version supported by this compile
+r.
+
+It is recommended that the compiler be upgraded.
+
+warning: android\content\ComponentCallbacks.class(android\content:ComponentCallbacks.class): major version 51 is newer than 50, the highest major version supported by this compiler.
+
+It is recommended that the compiler be upgraded.
+
+warning: android\view\ContextThemeWrapper.class(android\view:ContextThemeWrapper.class): major version 51 is newer than 50, the highest major version supported by this compiler.
+
+It is recommended that the compiler be upgraded.
+
+warning: android\content\ContextWrapper.class(android\content:ContextWrapper.class): major version 51 is newer than 50, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+
+warning: java\util\concurrent\Executors.class(java\util\concurrent:Executors.class): major version 51 is newer than 50, the highest major version supported by this compiler.
+
+It is recommended that the compiler be upgraded.
+
+warning: java\security\SecureRandom.class(java\security:SecureRandom.class): major version 51 is newer than 50, the highest major version supported by this compiler.
+
+It is recommended that the compiler be upgraded.
+
+warning: java\lang\IllegalAccessException.class(java\lang:IllegalAccessException.class): major version 51 is newer than 50, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+
+warning: android\webkit\ClientCertRequest.class(android\webkit:ClientCertRequest.class): major version 51 is newer than 50, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+
+warning: android\widget\EditText.class(android\widget:EditText.class): major version 51 is newer than 50, the highest major version supported by this compiler.
+
+It is recommended that the compiler be upgraded.
+
+warning: android\webkit\HttpAuthHandler.class(android\webkit:HttpAuthHandler.class): major version 51 is newer than 50, the highest major version supported by this compiler.
+
+It is recommended that the compiler be upgraded.
+
+warning: android\view\Gravity.class(android\view:Gravity.class): major version 51 is newer than 50, the highest major version supported by this compiler.
+
+It is recommended that the compiler be upgraded.
+
+warning: java\lang\reflect\Constructor.class(java\lang\reflect:Constructor.class): major version 51 is newer than 50, the highest major version supported by this compiler.
+
+It is recommended that the compiler be upgraded.
+
+warning: java\util\HashSet.class(java\util:HashSet.class): major version 51 is newer than 50, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+
+warning: java\util\Set.class(java\util:Set.class): major version 51 is newer than 50, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+
+warning: android\content\BroadcastReceiver.class(android\content:BroadcastReceiver.class): major version 51 is newer than 50, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+
+warning: android\content\IntentFilter.class(android\content:IntentFilter.class): major version 51 is newer than 50, the highest major version supported by this compiler.
+
+It is recommended that the compiler be upgraded.
+
+Note: Some input files use or override a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+
+100 warnings
+
+
+
+:CordovaLib:processDebugJavaRes
+ UP-TO-DATE
+
+
+:CordovaLib:transformResourcesWithMergeJavaResForDebug
+
+
+:CordovaLib:transformClassesAndResourcesWithSyncLibJarsForDebug
+
+
+:CordovaLib:mergeDebugJniLibFolders
+
+
+:CordovaLib:transformNative_libsWithMergeJniLibsForDebug
+
+
+:CordovaLib:transformNative_libsWithSyncJniLibsForDebug
+
+
+:CordovaLib:bundleDebug
+
+
+:prepareAndroidCordovaLibUnspecifiedDebugLibrary
+
+:prepareDebugDependencies
+
+:compileDebugAidl
+
+
+:compileDebugRenderscript
+
+
+:generateDebugBuildConfig
+
+
+:generateDebugAssets
+
+UP-TO-DATE
+
+:mergeDebugAssets
+
+
+:generateDebugResValues
+
+
+:generateDebugResources
+
+
+:mergeDebugResources
+
+
+:processDebugManifest
+
+
+:processDebugResources
+
+
+:generateDebugSources
+
+:compileDebugJavaWithJavac
+warning: android\os\Bundle.class(android\os:Bundle.class): major version 51 is newer than 50, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+
+warning: android\app\Activity.class(android\app:Activity.class): major version 51 is newer than 50, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+
+warning: android\view\LayoutInflater.class(android\view:LayoutInflater.class): major version 51 is newer than 50, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: android\view\LayoutInflater$Factory2.class(android\view:LayoutInflater$Factory2.class): major version 51 is newer than 50, the highest major version supported by this compi
+ler.
+It is recommended that the compiler be upgraded.
+warning: android\view\LayoutInflater$Factory.class(android\view:LayoutInflater$Factory.class): major version 51 is newer than 50, the highest major version supported by this compile
+r.
+It is recommended that the compiler be upgraded.
+
+warning: java\lang\Object.class(java\lang:Object.class): major version 51 is newer than 50, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+
+warning: android\view\Window.class(android\view:Window.class): major version 51 is newer than 50, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: android\view\Window$Callback.class(android\view:Window$Callback.class): major version 51 is newer than 50, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+
+warning: android\view\KeyEvent.class(android\view:KeyEvent.class): major version 51 is newer than 50, the highest major version supported by this compiler.
+
+It is recommended that the compiler be upgraded.
+warning: android\view\KeyEvent$Callback.class(android\view:KeyEvent$Callback.class): major version 51 is newer than 50, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+
+warning: android\os\Parcelable.class(android\os:Parcelable.class): major version 51 is newer than 50, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+
+warning: android\view\InputEvent.class(android\view:InputEvent.class): major version 51 is newer than 50, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+
+warning: android\view\View.class(android\view:View.class): major version 51 is newer than 50, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+
+warning: android\view\View$OnCreateContextMenuListener.class(android\view:View$OnCreateContextMenuListener.class): major version 51 is newer than 50, the highest major version suppo
+rted by this compiler.
+It is recommended that the compiler be upgraded.
+
+warning: android\graphics\drawable\Drawable.class(android\graphics\drawable:Drawable.class): major version 51 is newer than 50, the highest major version supported by this compiler.
+
+It is recommended that the compiler be upgraded.
+
+warning: android\graphics\drawable\Drawable$Callback.class(android\graphics\drawable:Drawable$Callback.class): major version 51 is newer than 50, the highest major version supported
+ by this compiler.
+It is recommended that the compiler be upgraded.
+
+warning: android\view\accessibility\AccessibilityEventSource.class(android\view\accessibility:AccessibilityEventSource.class): major version 51 is newer than 50, the highest major v
+ersion supported by this compiler.
+
+It is recommended that the compiler be upgraded.
+
+warning: android\content\ComponentCallbacks2.class(android\content:ComponentCallbacks2.class): major version 51 is newer than 50, the highest major version supported by this compile
+r.
+It is recommended that the compiler be upgraded.
+
+warning: android\content\ComponentCallbacks.class(android\content:ComponentCallbacks.class): major version 51 is newer than 50, the highest major version supported by this compiler.
+
+
+It is recommended that the compiler be upgraded.
+
+warning: android\view\ContextThemeWrapper.class(android\view:ContextThemeWrapper.class): major version 51 is newer than 50, the highest major version supported by this compiler.
+
+It is recommended that the compiler be upgraded.
+
+warning: android\content\ContextWrapper.class(android\content:ContextWrapper.class): major version 51 is newer than 50, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+
+warning: android\content\Context.class(android\content:Context.class): major version 51 is newer than 50, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+
+warning: org\json\JSONArray.class(org\json:JSONArray.class): major version 51 is newer than 50, the highest major version supported by this compiler.
+
+It is recommended that the compiler be upgraded.
+
+warning: org\json\JSONException.class(org\json:JSONException.class): major version 51 is newer than 50, the highest major version supported by this compiler.
+
+It is recommended that the compiler be upgraded.
+
+warning: android\graphics\Rect.class(android\graphics:Rect.class): major version 51 is newer than 50, the highest major version supported by this compiler.
+
+It is recommended that the compiler be upgraded.
+
+warning: android\util\DisplayMetrics.class(android\util:DisplayMetrics.class): major version 51 is newer than 50, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: android\view\ViewTreeObserver.class(android\view:ViewTreeObserver.class): major version 51 is newer than 50, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: android\view\ViewTreeObserver$OnGlobalLayoutListener.class(android\view:ViewTreeObserver$OnGlobalLayoutListener.class): major version 51 is newer than 50, the highest major
+ version supported by this compiler.
+It is recommended that the compiler be upgraded.
+
+warning: android\view\inputmethod\InputMethodManager.class(android\view\inputmethod:InputMethodManager.class): major version 51 is newer than 50, the highest major version supported
+ by this compiler.
+It is recommended that the compiler be upgraded.
+
+warning: android\view\Display.class(android\view:Display.class): major version 51 is newer than 50, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+
+warning: android\graphics\Point.class(android\graphics:Point.class): major version 51 is newer than 50, the highest major version supported by this compiler.
+
+It is recommended that the compiler be upgraded.
+
+warning: android\os\Build.class(android\os:Build.class): major version 51 is newer than 50, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+
+warning: java\lang\String.class(java\lang:String.class): major version 51 is newer than 50, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+
+warning: java\util\TimeZone.class(java\util:TimeZone.class): major version 51 is newer than 50, the highest major version supported by this compiler.
+
+It is recommended that the compiler be upgraded.
+
+warning: org\json\JSONObject.class(org\json:JSONObject.class): major version 51 is newer than 50, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+
+warning: android\provider\Settings.class(android\provider:Settings.class): major version 51 is newer than 50, the highest major version supported by this compiler.
+
+It is recommended that the compiler be upgraded.
+warning: android\app\Dialog.class(android\app:Dialog.class): major version 51 is newer than 50, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+
+warning: android\app\ProgressDialog.class(android\app:ProgressDialog.class): major version 51 is newer than 50, the highest major version supported by this compiler.
+
+It is recommended that the compiler be upgraded.
+
+warning: android\content\DialogInterface.class(android\content:DialogInterface.class): major version 51 is newer than 50, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+
+warning: android\content\res\Configuration.class(android\content\res:Configuration.class): major version 51 is newer than 50, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+
+warning: android\graphics\Color.class(android\graphics:Color.class): major version 51 is newer than 50, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+
+warning: android\graphics\drawable\ColorDrawable.class(android\graphics\drawable:ColorDrawable.class): major version 51 is newer than 50, the highest major version supported by this
+ compiler.
+
+It is recommended that the compiler be upgraded.
+
+warning: android\os\Handler.class(android\os:Handler.class): major version 51 is newer than 50, the highest major version supported by this compiler.
+
+It is recommended that the compiler be upgraded.
+
+warning: android\view\Gravity.class(android\view:Gravity.class): major version 51 is newer than 50, the highest major version supported by this compiler.
+
+It is recommended that the compiler be upgraded.
+
+warning: android\view\ViewGroup.class(android\view:ViewGroup.class): major version 51 is newer than 50, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+
+warning: android\view\ViewGroup$LayoutParams.class(android\view:ViewGroup$LayoutParams.class): major version 51 is newer than 50, the highest major version supported by this compile
+r.
+
+It is recommended that the compiler be upgraded.
+warning: android\view\WindowManager.class(android\view:WindowManager.class): major version 51 is newer than 50, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: android\view\animation\Animation.class(android\view\animation:Animation.class): major version 51 is newer than 50, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+
+warning: android\view\animation\AlphaAnimation.class(android\view\animation:AlphaAnimation.class): major version 51 is newer than 50, the highest major version supported by this com
+piler.
+It is recommended that the compiler be upgraded.
+
+warning: android\view\animation\DecelerateInterpolator.class(android\view\animation:DecelerateInterpolator.class): major version 51 is newer than 50, the highest major version suppo
+rted by this compiler.
+
+It is recommended that the compiler be upgraded.
+
+warning: android\widget\ImageView.class(android\widget:ImageView.class): major version 51 is newer than 50, the highest major version supported by this compiler.
+
+It is recommended that the compiler be upgraded.
+
+warning: android\widget\LinearLayout.class(android\widget:LinearLayout.class): major version 51 is newer than 50, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+
+warning: android\widget\ProgressBar.class(android\widget:ProgressBar.class): major version 51 is newer than 50, the highest major version supported by this compiler.
+
+It is recommended that the compiler be upgraded.
+
+warning: android\widget\RelativeLayout.class(android\widget:RelativeLayout.class): major version 51 is newer than 50, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+
+warning: org\xmlpull\v1\XmlPullParser.class(org\xmlpull\v1:XmlPullParser.class): major version 51 is newer than 50, the highest major version supported by this compiler.
+
+It is recommended that the compiler be upgraded.
+warning: java\lang\Boolean.class(java\lang:Boolean.class): major version 51 is newer than 50, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+
+warning: android\annotation\SuppressLint.class(android\annotation:SuppressLint.class): major version 51 is newer than 50, the highest major version supported by this compiler.
+
+It is recommended that the compiler be upgraded.
+
+warning: android\view\ViewDebug.class(android\view:ViewDebug.class): major version 51 is newer than 50, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+
+warning: android\view\ViewDebug$ExportedProperty.class(android\view:ViewDebug$ExportedProperty.class): major version 51 is newer than 50, the highest major version supported by this
+ compiler.
+
+It is recommended that the compiler be upgraded.
+
+warning: android\view\ViewDebug$IntToString.class(android\view:ViewDebug$IntToString.class): major version 51 is newer than 50, the highest major version supported by this compiler.
+
+
+It is recommended that the compiler be upgraded.
+warning: android\view\ViewDebug$FlagToString.class(android\view:ViewDebug$FlagToString.class): major version 51 is newer than 50, the highest major version supported by this compile
+r.
+It is recommended that the compiler be upgraded.
+warning: java\lang\Override.class(java\lang:Override.class): major version 51 is newer than 50, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: java\lang\annotation\Annotation.class(java\lang\annotation:Annotation.class): major version 51 is newer than 50, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+
+warning: java\lang\SuppressWarnings.class(java\lang:SuppressWarnings.class): major version 51 is newer than 50, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: java\lang\annotation\Target.class(java\lang\annotation:Target.class): major version 51 is newer than 50, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+
+warning: java\lang\annotation\ElementType.class(java\lang\annotation:ElementType.class): major version 51 is newer than 50, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+
+warning: java\lang\annotation\Retention.class(java\lang\annotation:Retention.class): major version 51 is newer than 50, the highest major version supported by this compiler.
+
+It is recommended that the compiler be upgraded.
+
+warning: java\lang\annotation\RetentionPolicy.class(java\lang\annotation:RetentionPolicy.class): major version 51 is newer than 50, the highest major version supported by this compi
+ler.
+
+It is recommended that the compiler be upgraded.
+
+warning: java\lang\Error.class(java\lang:Error.class): major version 51 is newer than 50, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+
+warning: android\content\pm\PackageManager.class(android\content\pm:PackageManager.class): major version 51 is newer than 50, the highest major version supported by this compiler.
+
+It is recommended that the compiler be upgraded.
+
+warning: android\content\pm\PackageManager$NameNotFoundException.class(android\content\pm:PackageManager$NameNotFoundException.class): major version 51 is newer than 50, the highest
+ major version supported by this compiler.
+
+It is recommended that the compiler be upgraded.
+
+warning: android\util\AndroidException.class(android\util:AndroidException.class): major version 51 is newer than 50, the highest major version supported by this compiler.
+
+It is recommended that the compiler be upgraded.
+
+warning: java\lang\Exception.class(java\lang:Exception.class): major version 51 is newer than 50, the highest major version supported by this compiler.
+
+It is recommended that the compiler be upgraded.
+warning: java\lang\Throwable.class(java\lang:Throwable.class): major version 51 is newer than 50, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: java\lang\RuntimeException.class(java\lang:RuntimeException.class): major version 51 is newer than 50, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+
+warning: java\lang\Class.class(java\lang:Class.class): major version 51 is newer than 50, the highest major version supported by this compiler.
+
+It is recommended that the compiler be upgraded.
+
+warning: android\content\IntentSender.class(android\content:IntentSender.class): major version 51 is newer than 50, the highest major version supported by this compiler.
+
+It is recommended that the compiler be upgraded.
+
+warning: android\content\IntentSender$SendIntentException.class(android\content:IntentSender$SendIntentException.class): major version 51 is newer than 50, the highest major version
+ supported by this compiler.
+
+It is recommended that the compiler be upgraded.
+
+warning: java\io\IOException.class(java\io:IOException.class): major version 51 is newer than 50, the highest major version supported by this compiler.
+
+It is recommended that the compiler be upgraded.
+
+warning: java\io\FileNotFoundException.class(java\io:FileNotFoundException.class): major version 51 is newer than 50, the highest major version supported by this compiler.
+
+It is recommended that the compiler be upgraded.
+
+warning: java\lang\Runnable.class(java\lang:Runnable.class): major version 51 is newer than 50, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+
+warning: android\os\IBinder.class(android\os:IBinder.class): major version 51 is newer than 50, the highest major version supported by this compiler.
+
+It is recommended that the compiler be upgraded.
+
+warning: java\util\concurrent\ExecutorService.class(java\util\concurrent:ExecutorService.class): major version 51 is newer than 50, the highest major version supported by this compi
+ler.
+
+It is recommended that the compiler be upgraded.
+
+warning: java\util\concurrent\Executor.class(java\util\concurrent:Executor.class): major version 51 is newer than 50, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+
+warning: android\view\ViewManager.class(android\view:ViewManager.class): major version 51 is newer than 50, the highest major version supported by this compiler.
+
+It is recommended that the compiler be upgraded.
+
+warning: android\R.class(android:R.class): major version 51 is newer than 50, the highest major version supported by this compiler.
+
+It is recommended that the compiler be upgraded.
+
+warning: android\R$id.class(android:R$id.class): major version 51 is newer than 50, the highest major version supported by this compiler.
+
+It is recommended that the compiler be upgraded.
+
+warning: android\os\Build$VERSION.class(android\os:Build$VERSION.class): major version 51 is newer than 50, the highest major version supported by this compiler.
+
+It is recommended that the compiler be upgraded.
+
+warning: java\lang\Integer.class(java\lang:Integer.class): major version 51 is newer than 50, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+
+warning: java\lang\Number.class(java\lang:Number.class): major version 51 is newer than 50, the highest major version supported by this compiler.
+
+It is recommended that the compiler be upgraded.
+
+warning: java\util\List.class(java\util:List.class): major version 51 is newer than 50, the highest major version supported by this compiler.
+
+It is recommended that the compiler be upgraded.
+warning: java\io\Serializable.class(java\io:Serializable.class): major version 51 is newer than 50, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: java\lang\Comparable.class(java\lang:Comparable.class): major version 51 is newer than 50, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+warning: java\lang\CharSequence.class(java\lang:CharSequence.class): major version 51 is newer than 50, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+
+warning: java\lang\StringBuilder.class(java\lang:StringBuilder.class): major version 51 is newer than 50, the highest major version supported by this compiler.
+
+It is recommended that the compiler be upgraded.
+
+warning: java\lang\AbstractStringBuilder.class(java\lang:AbstractStringBuilder.class): major version 51 is newer than 50, the highest major version supported by this compiler.
+
+It is recommended that the compiler be upgraded.
+
+warning: java\lang\StringBuffer.class(java\lang:StringBuffer.class): major version 51 is newer than 50, the highest major version supported by this compiler.
+It is recommended that the compiler be upgraded.
+
+warning: android\content\ContentResolver.class(android\content:ContentResolver.class): major version 51 is newer than 50, the highest major version supported by this compiler.
+
+It is recommended that the compiler be upgraded.
+
+warning: android\provider\Settings$Secure.class(android\provider:Settings$Secure.class): major version 51 is newer than 50, the highest major version supported by this compiler.
+
+It is recommended that the compiler be upgraded.
+warning: android\provider\Settings$NameValueTable.class(android\provider:Settings$NameValueTable.class): major version 51 is newer than 50, the highest major version supported by th
+is compiler.
+It is recommended that the compiler be upgraded.
+
+Note: E:\Research\domisu\GitHub\ionic2\dms-contact\platforms\android\src\org\apache\cordova\splashscreen\SplashScreen.java uses or overrides a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+
+100 warnings
+
+
+
+:compileDebugNdk
+
+UP-TO-DATE
+
+:compileDebugSources
+
+
+:transformClassesWithDexForDebug
+
+
+:mergeDebugJniLibFolders
+
+
+:transformNative_libsWithMergeJniLibsForDebug
+
+
+:processDebugJavaRes
+ UP-TO-DATE
+
+:transformResourcesWithMergeJavaResForDebug
+
+
+:validateDebugSigning
+
+:packageDebug
+
+
+:zipalignDebug
+
+
+:assembleDebug
+
+:cdvBuildDebug
+
+
+
+
+BUILD SUCCESSFUL
+
+
+Total time: 1 mins 5.307 secs
+
+Built the following apk(s):
+        E:/Research/domisu/GitHub/ionic2/dms-contact/platforms/android/build/outputs/apk/android-debug.apk
+
+
+Using apk: E:/Research/domisu/GitHub/ionic2/dms-contact/platforms/android/build/outputs/apk/android-debug.apk
+
+
+INSTALL SUCCESS
+
+LAUNCH SUCCESS
+
+
+
+E:\Research\domisu\GitHub\ionic2\dms-contact>
+
+###INSTALL IONIC NATIVE (a curated set of ES5/ES6/TypeScript wrappers for Cordova/PhoneGap plugins) TO THE APP###
+E:\Research\domisu\GitHub\ionic2\dms-contact>npm install ionic-native --save
+npm WARN install Couldn't install optional dependency: Unsupported
+ionic-hello-world@ E:\Research\domisu\GitHub\ionic2\dms-contact
+└── ionic-native@2.4.1
+
+
+E:\Research\domisu\GitHub\ionic2\dms-contact>
+
+###ADD CORDOVA PLUGIN CONTACT###
+E:\Research\domisu\GitHub\ionic2\dms-contact>ionic plugin add cordova-plugin-contacts
+Fetching plugin "cordova-plugin-contacts" via npm
+Installing "cordova-plugin-contacts" for android
+Fetching plugin "cordova-plugin-compat" via npm
+Installing "cordova-plugin-compat" for android
+E:\Research\domisu\GitHub\ionic2\dms-contact>ionic plugin add cordova-plugin-contacts --save
+Plugin "cordova-plugin-contacts" already installed on android.
+Saved plugin info for "cordova-plugin-contacts" to config.xml
+E:\Research\domisu\GitHub\ionic2\dms-contact>
+
+---20170221---
+E:\Research\domisu\GitHub\ionic2\dms-contact>ionic plugin add cordova-sqlite-storage --save
+Fetching plugin "cordova-sqlite-storage@2.0.2" via npm
+Installing "cordova-sqlite-storage" for android
+installing external dependencies via npm
+npm install of external dependencies ok
+Saved plugin info for "cordova-sqlite-storage" to config.xml
+E:\Research\domisu\GitHub\ionic2\dms-contact>
+
+---20170222---
+E:\Research\domisu\GitHub\ionic2\dms-contact>ionic platform add browser
+Adding browser project...
+Running command: cmd "/s /c "C:\Users\nlduy.CODIXFR\.cordova\lib\npm_cache\cordova-browser\4.1.0\package\bin\create.bat E:\Research\domisu\GitHub\ionic2\dms-contact\platforms\browse
+r com.ionicframework.dmscontact201693 dms-contact""
+Creating Browser project. Path: platforms\browser
+Installing "cordova-plugin-compat" for browser
+Installing "cordova-plugin-console" for browser
+Installing "cordova-plugin-contacts" for browser
+Dependent plugin "cordova-plugin-compat" already installed on browser.
+Installing "cordova-plugin-device" for browser
+Installing "cordova-plugin-splashscreen" for browser
+Installing "cordova-plugin-statusbar" for browser
+Installing "cordova-plugin-whitelist" for browser
+Installing "cordova-sqlite-storage" for browser
+installing external dependencies via npm
+npm install of external dependencies ok
+Installing "ionic-plugin-keyboard" for browser
+
+E:\Research\domisu\GitHub\ionic2\dms-contact>ionic run browser
+> ionic-hello-world@ ionic:build E:\Research\domisu\GitHub\ionic2\dms-contact
+> ionic-app-scripts build
+
+[08:07:40]  ionic-app-scripts 1.0.0
+[08:07:40]  build dev started ...
+[08:07:40]  clean started ...
+[08:07:40]  clean finished in 16 ms
+[08:07:40]  copy started ...
+[08:07:40]  transpile started ...
+[08:07:47]  transpile finished in 6.60 s
+[08:07:47]  webpack started ...
+[08:07:47]  copy finished in 7.39 s
+[08:07:57]  webpack finished in 10.07 s
+[08:07:57]  sass started ...
+[08:07:58]  sass finished in 1.67 s
+[08:07:58]  build dev finished in 18.39 s
+[08:08:02]  tslint: E:/Research/domisu/GitHub/ionic2/dms-contact/src/pages/home/home.ts, line: 2
+            Unused import: 'NavController'
+
+       L1:  import { Component } from '@angular/core';
+       L2:  import { NavController } from 'ionic-angular';
+
+[08:08:02]  tslint: E:/Research/domisu/GitHub/ionic2/dms-contact/src/pages/history/history.ts, line: 2
+            Unused import: 'NavController'
+
+       L1:  import { Component } from '@angular/core';
+       L2:  import { NavController } from 'ionic-angular';
+       L3:  import { SQLite } from 'ionic-native';
+
+[08:08:02]  tslint: E:/Research/domisu/GitHub/ionic2/dms-contact/src/pages/help/help.ts, line: 2
+            Unused import: 'NavController'
+
+       L1:  import { Component } from '@angular/core';
+       L2:  import { NavController } from 'ionic-angular';
+
+[08:08:03]  tslint: ...Research/domisu/GitHub/ionic2/dms-contact/src/pages/all-contacts/all-contacts.ts, line: 24
+            Unused variable: 'promise'
+
+      L23:  options.hasPhoneNumber = true;
+      L24:  let promise = Contacts.find(fields,options).then((contacts)=>{
+      L25:    this.items = contacts;
+
+Running command: cmd "/s /c "E:\Research\domisu\GitHub\ionic2\dms-contact\platforms\browser\cordova\run.bat""
+
+
+Static file server running @ http://localhost:8000/index.html
+CTRL + C to shut down
+
+200 /index.html (gzip)
+200 /cordova.js (gzip)
+200 /build/main.css (gzip)
+200 /build/polyfills.js (gzip)
+
+200 /cordova_plugins.js (gzip)
+
+200 /plugins/cordova-plugin-contacts/www/Contact.js (gzip)
+
+200 /plugins/cordova-plugin-contacts/www/convertUtils.js (gzip)
+200 /plugins/cordova-plugin-contacts/www/ContactAddress.js (gzip)
+
+200 /plugins/cordova-plugin-contacts/www/ContactError.js (gzip)
+200 /plugins/cordova-plugin-contacts/www/contacts.js (gzip)
+
+200 /plugins/cordova-plugin-contacts/www/ContactFindOptions.js (gzip)
+
+200 /plugins/cordova-plugin-contacts/www/ContactField.js (gzip)
+
+200 /plugins/cordova-plugin-contacts/www/ContactName.js (gzip)
+
+200 /plugins/cordova-plugin-contacts/www/ContactOrganization.js (gzip)
+
+200 /plugins/cordova-plugin-contacts/www/ContactFieldType.js (gzip)
+
+200 /plugins/cordova-plugin-device/www/device.js (gzip)
+
+200 /plugins/cordova-plugin-device/src/browser/DeviceProxy.js (gzip)
+
+200 /plugins/cordova-plugin-splashscreen/www/splashscreen.js (gzip)
+
+200 /plugins/cordova-plugin-statusbar/www/statusbar.js (gzip)
+
+200 /plugins/cordova-plugin-splashscreen/src/browser/SplashScreenProxy.js (gzip)
+
+200 /plugins/cordova-plugin-statusbar/src/browser/StatusBarProxy.js (gzip)
+
+200 /plugins/cordova-sqlite-storage/www/SQLitePlugin.js (gzip)
+
+200 /plugins/ionic-plugin-keyboard/www/browser/keyboard.js
+
+200 /build/main.js (gzip)
+
+200 /config.xml (gzip)
+
+404 /img/logo.png
+
+200 /assets/fonts/ionicons.woff2?v=3.0.0-alpha.3
+
+200 /assets/fonts/roboto-regular.ttf (gzip)
+
+200 /assets/fonts/roboto-medium.ttf (gzip)
+
+200 /assets/icon/favicon.ico (gzip)
+
+200 /index.html (gzip)
+
+200 /cordova.js (gzip)
+
+200 /build/polyfills.js (gzip)
+
+200 /build/main.css (gzip)
+
+200 /build/main.js (gzip)
+
+200 /assets/fonts/ionicons.woff2?v=3.0.0-alpha.3
+
+200 /cordova_plugins.js (gzip)
+200 /assets/fonts/roboto-medium.ttf (gzip)
+
+200 /assets/fonts/roboto-regular.ttf (gzip)
+
+200 /build/main.js.map (gzip)
+
+200 /plugins/cordova-plugin-contacts/www/Contact.js (gzip)
+
+200 /plugins/cordova-plugin-contacts/www/convertUtils.js (gzip)
+200 /plugins/cordova-plugin-contacts/www/ContactError.js (gzip)
+200 /plugins/cordova-plugin-contacts/www/ContactAddress.js (gzip)
+200 /plugins/cordova-plugin-contacts/www/contacts.js (gzip)
+200 /plugins/cordova-plugin-contacts/www/ContactField.js (gzip)
+
+200 /plugins/cordova-plugin-contacts/www/ContactFindOptions.js (gzip)
+
+200 /plugins/cordova-plugin-contacts/www/ContactOrganization.js (gzip)
+200 /plugins/cordova-plugin-contacts/www/ContactFieldType.js (gzip)
+200 /plugins/cordova-plugin-contacts/www/ContactName.js (gzip)
+200 /plugins/cordova-plugin-device/www/device.js (gzip)
+200 /plugins/cordova-plugin-device/src/browser/DeviceProxy.js (gzip)
+
+200 /plugins/cordova-plugin-splashscreen/www/splashscreen.js (gzip)
+200 /plugins/ionic-plugin-keyboard/www/browser/keyboard.js
+200 /plugins/cordova-plugin-splashscreen/src/browser/SplashScreenProxy.js (gzip)
+200 /plugins/cordova-plugin-statusbar/www/statusbar.js (gzip)
+200 /plugins/cordova-sqlite-storage/www/SQLitePlugin.js (gzip)
+200 /plugins/cordova-plugin-statusbar/src/browser/StatusBarProxy.js (gzip)
+200 /config.xml (gzip)
+404 /img/logo.png
+200 /assets/icon/favicon.ico (gzip)
+Terminate batch job (Y/N)? y
+E:\Research\domisu\GitHub\ionic2\dms-contact>
+
+---20170306---
+E:\Research\domisu\GitHub\ionic2\dms-contact>ionic plugin add de.appplant.cordova.plugin.local-notification --save
+Fetching plugin "de.appplant.cordova.plugin.local-notification" via npm
+Installing "de.appplant.cordova.plugin.local-notification" for android
+Dependent plugin "cordova-plugin-device" already installed on android.
+Fetching plugin "cordova-plugin-app-event" via npm
+Installing "cordova-plugin-app-event" for android
+        Your support is needed. If you use the local-notification plugin please support us in order to ensure further development.
+        https://github.com/katzer/cordova-plugin-local-notifications#supporting
+        Thank you!
+Installing "de.appplant.cordova.plugin.local-notification" for browser
+Dependent plugin "cordova-plugin-device" already installed on browser.
+Installing "cordova-plugin-app-event" for browser
+        Your support is needed. If you use the local-notification plugin please support us in order to ensure further development.
+        https://github.com/katzer/cordova-plugin-local-notifications#supporting
+        Thank you!
+Saved plugin info for "de.appplant.cordova.plugin.local-notification" to config.xml
+E:\Research\domisu\GitHub\ionic2\dms-contact>
+
+---20170307---
+E:\Research\domisu\GitHub\ionic2\dms-contact>ionic plugin add cordova-plugin-x-socialsharing --save
+Fetching plugin "cordova-plugin-x-socialsharing" via npm
+Installing "cordova-plugin-x-socialsharing" for android
+Installing "cordova-plugin-x-socialsharing" for browser
+Saved plugin info for "cordova-plugin-x-socialsharing" to config.xml
+E:\Research\domisu\GitHub\ionic2\dms-contact>
+E:\Research\domisu\GitHub\ionic2\dms-contact>ionic plugin add cordova-plugin-file --save
+Fetching plugin "cordova-plugin-file" via npm
+Installing "cordova-plugin-file" for android
+Dependent plugin "cordova-plugin-compat" already installed on android.
+The Android Persistent storage location now defaults to "Internal". Please check this plugin's README to see if your application needs any changes in its config.xml.
+If this is a new application no changes are required.
+If this is an update to an existing application that did not specify an "AndroidPersistentFileLocation" you may need to add:
+      "<preference name="AndroidPersistentFileLocation" value="Compatibility" />"
+to config.xml in order for the application to find previously stored files.
+Installing "cordova-plugin-file" for browser
+Dependent plugin "cordova-plugin-compat" already installed on browser.
+Saved plugin info for "cordova-plugin-file" to config.xml
+E:\Research\domisu\GitHub\ionic2\dms-contact>
+
+---20170502---
+install ngx-translate to support multi-languages.
+Ref: https://ionicframework.com/docs/resources/ng2-translate/
+E:\Research\domisu\GitHub\ionic2\dms-contact>npm install npm install @ngx-translate/core @ngx-translate/http-loader --save
+npm WARN install Couldn't install optional dependency: Unsupported
+npm WARN prefer global npm@4.5.0 should be installed with -g
+ionic-hello-world@ E:\Research\domisu\GitHub\ionic2\dms-contact
+├── @ngx-translate/core@6.0.1
+├── @ngx-translate/http-loader@0.0.3
+├── install@0.9.6
+└── npm@4.5.0
+
+
+E:\Research\domisu\GitHub\ionic2\dms-contact>
+
+---20170506---
+E:\Research\domisu\GitHub\ionic2\dms-contact>ionic plugin add cordova-plugin-globalization  --save
+Fetching plugin "cordova-plugin-globalization" via npm
+Installing "cordova-plugin-globalization" for android
+Installing "cordova-plugin-globalization" for browser
+Saved plugin info for "cordova-plugin-globalization" to config.xml
+
+E:\Research\domisu\GitHub\ionic2\dms-contact>
+

@@ -1,0 +1,13 @@
+{
+  "Menu":{
+    "Home":"Home",
+    "AllContacts":"All Contacts",
+    "CodesMapping":"Codes Mapping",
+    "InvalidCodes":"Invalid Codes",
+    "History":"History",
+    "Help":"Help",
+    "About":"About"
+  },
+  "HELLO":"hello",
+  "Welcome": "Welcome"
+}

@@ -10,6 +10,10 @@ import { About } from '../pages/about/about';
 import { AllContacts} from '../pages/all-contacts/all-contacts';
 import { UpdateContacts } from '../pages/contact/update';
 import { FTAC } from '../pages/ftac/ftac';
+import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { Http } from '@angular/http';
+import { Globalization } from 'ionic-native';
 
 @NgModule({
   declarations: [
@@ -25,7 +29,14 @@ import { FTAC } from '../pages/ftac/ftac';
     FTAC
   ],
   imports: [
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+    TranslateModule.forRoot({
+      loader:{
+        provide: TranslateLoader,
+        useFactory: (createTranslateLoader),
+        deps: [Http]
+      }
+    })
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -40,6 +51,10 @@ import { FTAC } from '../pages/ftac/ftac';
     About,
     FTAC
   ],
-  providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}]
+  providers: [Globalization, {provide: ErrorHandler, useClass: IonicErrorHandler}]
 })
 export class AppModule {}
+
+export function createTranslateLoader(http: Http){
+  return new TranslateHttpLoader(http, './assets/i18n/', '.json');
+}

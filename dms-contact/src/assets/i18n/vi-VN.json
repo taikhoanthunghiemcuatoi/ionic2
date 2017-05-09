@@ -1,0 +1,13 @@
+{
+  "Menu":{
+    "Home":"Trang Chủ",
+    "AllContacts":"Danh Bạ",
+    "CodesMapping":"Chuyển Đổi Mã",
+    "InvalidCodes":"Mã Không Hợp Lệ",
+    "History":"Lịch Sử",
+    "Help":"Giúp Đỡ",
+    "About":"Về Chúng Tôi"
+  },
+  "HELLO": "chào",
+  "Welcome": "Chào mừng"
+}

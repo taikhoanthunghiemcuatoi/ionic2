@@ -1,6 +1,7 @@
 import { Component, ViewChild } from '@angular/core';
 import { Nav, Platform } from 'ionic-angular';
-import { StatusBar, Splashscreen, SQLite } from 'ionic-native';
+import { StatusBar, Splashscreen, SQLite, Globalization } from 'ionic-native';
+import { TranslateService } from '@ngx-translate/core';
 
 import { Page1 } from '../pages/page1/page1';
 import { Page2 } from '../pages/page2/page2';
@@ -13,11 +14,11 @@ import { UpdateContacts} from '../pages/contact/update';
 import { FTAC } from '../pages/ftac/ftac';
 import { DBStorage } from '../js/db-storage.ts';
 
-
 @Component({
   templateUrl: 'app.html'
 })
 export class MyApp {
+  static translate: TranslateService;
   @ViewChild(Nav) nav: Nav;
 
   rootPage: any = Home;
@@ -26,18 +27,18 @@ export class MyApp {
 
   db = new DBStorage();
 
-  constructor(public platform: Platform) {
+  constructor(public platform: Platform, private translate: TranslateService) {
     this.initializeApp();
 
     // used for an example of ngFor and navigation
     this.pages = [
-      { title: 'Home', component: Home},
-      { title: 'All Contacts', component: AllContacts},
-      { title: 'Update Contacts', component: UpdateContacts},
-      { title: 'Codes List', component: FTAC},
-      { title: 'History', component: History},
-      { title: 'Help', component: Help},
-      { title: 'About', component: About }
+      { title: 'Menu.Home', component: Home},
+      { title: 'Menu.AllContacts', component: AllContacts},
+      { title: 'Menu.CodesMapping', component: FTAC},
+      { title: 'Menu.InvalidCodes', component: UpdateContacts},
+      { title: 'Menu.History', component: History},
+      { title: 'Menu.Help', component: Help},
+      { title: 'Menu.About', component: About }
     ];
 
   }
@@ -49,6 +50,14 @@ export class MyApp {
       StatusBar.styleDefault();
       Splashscreen.hide();
 
+      Globalization.getPreferredLanguage().then(result => {
+        var language = result.value;
+        console.log('language: ' + language + '\n');
+
+        //setup TranslateService
+        this.setupTranslateService(language);
+      }).catch(e => console.log(e));
+
       //database
       this.db.openDatabase().then(()=>{this.createTables();},()=>{});
     });
@@ -59,6 +68,14 @@ export class MyApp {
     // we wouldn't want the back button to show in this scenario
     this.nav.setRoot(page.component);
 
+  }
+
+  setupTranslateService(lang: string){
+      console.log('calling setupTranslateService');
+      MyApp.translate = this.translate;
+      console.log('lang=' + lang);
+      MyApp.translate.setDefaultLang('en-US');
+      MyApp.translate.use(lang);
   }
 
   createTables(){
